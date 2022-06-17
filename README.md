@@ -29,7 +29,7 @@ hs.spaces.gotoSpace(newSpace)
 
 These are not generated bindings, or a re-written like-for-like API. This works by translating
 Python accesses, calls, and indexes into Lua code, and then executing it by shelling out to
-Hammerspoon's `hc` command-line tool.
+Hammerspoon's `hs` command-line tool.
 
 > ⚠️ Warning! ⚠️
 >
@@ -114,7 +114,7 @@ this isn't implemented yet.
 
 ### Environment Internals
 
-Internally, each attribute access or method call produces a separate invocation of the `hc` tool.
+Internally, each attribute access or method call produces a separate invocation of the `hs` tool.
 Lua global state persists between these invocations, so this bridge creates an array to store every
 object it cares about. The `LuaObject`s used on the Python side are simply indexes into this array.
 
